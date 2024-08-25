@@ -1,0 +1,60 @@
+{
+    "receitas": [
+        {
+            "imagem": "../img/brownie.jpg",
+            "nome": "Brownie simples",
+            "tempo": "40 min",
+            "porcoes": "8 porções",
+            "desrição": "Quando o desejo por um doce irresistível bate à porta, o brownie super rápido é a solução perfeita para satisfazer o paladar com uma sobremesa deliciosa e de preparo ágil. Esta receita é uma mistura perfeita de sabores intensos e praticidade, resultando em um brownie macio por dentro, com uma crosta levemente caramelizada por fora. O resultado são quadrados macios de brownie, perfeitos para serem apreciados quentes acompanhados de uma bola de sorvete ou congelados para um momento doce a qualquer hora. Esta receita simples e rápida oferece uma experiência de sabor inigualável para os amantes de doces. Prepare este brownie e saboreie um doce delicioso e prático, perfeito para adoçar os momentos especiais ou satisfazer aquela vontade de um docinho rápido e saboroso.",
+            "Ingredientes": [
+                "6 colheres (sopa) bem cheias de margarina sem sal",
+                "3/4 xícara (chá) achocolatado",
+                "1/2 xícara (chá) chocolate em pó",
+                "1 e 1/4 xícara (chá) farinha de trigo",
+                "2 xícaras (chá) açúcar",
+                "4 ovos",
+                "2 pitadas de sal ",
+                "1 colher (chá) de essência de baunilha",
+                "1 tablete de chocolate meio amargo picado em cubinhos",
+                "1/2 xícara (chá) de nozes picadas ou castanhas de caju granuladas"
+            ],
+            "modoDePreparo": [
+                "Misture os ovos e o açúcar",
+                "Em seguida, adicione todos os outros ingredientes até formar um creme uniforme",
+                "Despeje em uma assadeira, forrada com papel-manteiga e leve ao forno médio por 40 minutos",
+                "O brownie estará pronto quando a parte de cima estiver levemente corada e, ao se espetar um palito, ele esteja levemente úmido (devido ao chocolate derretido)",
+                "Corte em quadrados ainda quente e sirva com uma bola de sorvete de creme (se preferir), ou congele num saquinho para freezer",
+                "Para descongelar, coloque o brownie num prato de sobremesa e aqueça no micro-ondas, potência alta, por 1 minuto"
+            ],
+            "categoria": "Doce"
+        },
+        {
+            "imagem": "../img/brownie.jpg",
+            "nome": "Coxinha",
+            "tempo": "40 min",
+            "porcoes": "8 porções",
+            "desrição": "Quando o desejo por um doce irresistível bate à porta, o brownie super rápido é a solução perfeita para satisfazer o paladar com uma sobremesa deliciosa e de preparo ágil. Esta receita é uma mistura perfeita de sabores intensos e praticidade, resultando em um brownie macio por dentro, com uma crosta levemente caramelizada por fora. O resultado são quadrados macios de brownie, perfeitos para serem apreciados quentes acompanhados de uma bola de sorvete ou congelados para um momento doce a qualquer hora. Esta receita simples e rápida oferece uma experiência de sabor inigualável para os amantes de doces. Prepare este brownie e saboreie um doce delicioso e prático, perfeito para adoçar os momentos especiais ou satisfazer aquela vontade de um docinho rápido e saboroso.",
+            "Ingredientes": [
+                "6 colheres (sopa) bem cheias de margarina sem sal",
+                "3/4 xícara (chá) achocolatado",
+                "1/2 xícara (chá) chocolate em pó",
+                "1 e 1/4 xícara (chá) farinha de trigo",
+                "2 xícaras (chá) açúcar",
+                "4 ovos",
+                "2 pitadas de sal ",
+                "1 colher (chá) de essência de baunilha",
+                "1 tablete de chocolate meio amargo picado em cubinhos",
+                "1/2 xícara (chá) de nozes picadas ou castanhas de caju granuladas"
+            ],
+            "modoDePreparo": [
+                "Misture os ovos e o açúcar",
+                "Em seguida, adicione todos os outros ingredientes até formar um creme uniforme",
+                "Despeje em uma assadeira, forrada com papel-manteiga e leve ao forno médio por 40 minutos",
+                "O brownie estará pronto quando a parte de cima estiver levemente corada e, ao se espetar um palito, ele esteja levemente úmido (devido ao chocolate derretido)",
+                "Corte em quadrados ainda quente e sirva com uma bola de sorvete de creme (se preferir), ou congele num saquinho para freezer",
+                "Para descongelar, coloque o brownie num prato de sobremesa e aqueça no micro-ondas, potência alta, por 1 minuto"
+            ],
+            "categoria": "Doce"
+        }
+    ]
+}
