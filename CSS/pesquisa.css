@@ -112,12 +112,24 @@ body {
     gap: 20px;
 }
 
+#receitas-encontradas{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 10%; */
+    flex-wrap: wrap;
+
+}
+
 .card {
     width: 300px;
     height: 310px;
     background-color: #FAF4F4;
     display: grid;
     padding: 15px;
+    margin: 20px;
     grid-template-areas: "foto" "receita" "outro";
     grid-template-rows: 1fr 50px 1fr;
     border-radius: 20px;
