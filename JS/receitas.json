@@ -1,6 +1,7 @@
 {
     "receitas": [
         {
+            "id": "1",
             "imagem": "../img/brownie.jpg",
             "nome": "Brownie simples",
             "tempo": "40 min",
@@ -26,9 +27,11 @@
                 "Corte em quadrados ainda quente e sirva com uma bola de sorvete de creme (se preferir), ou congele num saquinho para freezer",
                 "Para descongelar, coloque o brownie num prato de sobremesa e aqueça no micro-ondas, potência alta, por 1 minuto"
             ],
-            "categoria": "Doce"
+            "categoria": "Doce",
+            "favorito": "nao"
         },
         {
+            "id": "2",
             "imagem": "../img/suco1.jpeg",
             "nome": "Suco de Couve",
             "tempo": "15 min",
@@ -45,9 +48,11 @@
                 "Bata no liquidificador todos os ingredientes",
                 "Coe o suco em uma peneira retirando o bagaço e sirva."
             ],
-            "categoria": "Bebida"
+            "categoria": "Bebida",
+            "favorito": "nao"
         },
         {
+            "id": "3",
             "imagem": "../img/coxinha1.jpg",
             "nome": "Coxinha",
             "tempo": "1 hr",
@@ -67,9 +72,11 @@
                 "Mexa até obter uma massa lisa e homogênea.",
                 "Recheie da maneira que preferir."
             ],
-            "categoria": "Salgado"
+            "categoria": "Salgado",
+            "favorito": "nao"
         },
         {
+            "id": "4",
             "imagem": "../img/suco2.jpg",
             "nome": "Suco de Amora",
             "tempo": "10 min",
@@ -86,9 +93,11 @@
                 "Bata todos os ingredientes no liquidificador.",
                 "Coe o suco e sirva."
             ],
-            "categoria": "Bebida"
+            "categoria": "Bebida",
+            "favorito": "nao"
         },
         {
+            "id": "5",
             "imagem": "../img/vitamina.jpeg",
             "nome": "Vitamina de Mamão",
             "tempo": "10 min",
@@ -105,9 +114,11 @@
                 "Coloque todos os ingredientes no liquidificador e bata até misturar e triturar bem.",
                 "Agora é só servir! Bom apetite."
             ],
-            "categoria": "Bebida"
+            "categoria": "Bebida",
+            "favorito": "sim"
         },
         {
+            "id": "6",
             "imagem": "../img/coxinha2.jpg",
             "nome": "Coxinha de Mandioca",
             "tempo": "45 min",
@@ -128,7 +139,8 @@
                 "Pré-aqueça a fritadeira a 200 ºC e depois asse as coxinhas por 20 minutos.",
                 "Agora é só servir. Bom apetite."
             ],
-            "categoria": "Salgado"
+            "categoria": "Salgado",
+            "favorito": "sim"
         }
     ]
 }
