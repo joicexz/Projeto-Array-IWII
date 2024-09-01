@@ -5,7 +5,7 @@
             "nome": "Brownie simples",
             "tempo": "40 min",
             "porcoes": "8 porções",
-            "desrição": "Quando o desejo por um doce irresistível bate à porta, o brownie super rápido é a solução perfeita para satisfazer o paladar com uma sobremesa deliciosa e de preparo ágil. Esta receita é uma mistura perfeita de sabores intensos e praticidade, resultando em um brownie macio por dentro, com uma crosta levemente caramelizada por fora. O resultado são quadrados macios de brownie, perfeitos para serem apreciados quentes acompanhados de uma bola de sorvete ou congelados para um momento doce a qualquer hora. Esta receita simples e rápida oferece uma experiência de sabor inigualável para os amantes de doces. Prepare este brownie e saboreie um doce delicioso e prático, perfeito para adoçar os momentos especiais ou satisfazer aquela vontade de um docinho rápido e saboroso.",
+            "descricao": "Quando o desejo por um doce irresistível bate à porta, o brownie super rápido é a solução perfeita para satisfazer o paladar com uma sobremesa deliciosa e de preparo ágil. Esta receita é uma mistura perfeita de sabores intensos e praticidade, resultando em um brownie macio por dentro, com uma crosta levemente caramelizada por fora. O resultado são quadrados macios de brownie, perfeitos para serem apreciados quentes acompanhados de uma bola de sorvete ou congelados para um momento doce a qualquer hora. Esta receita simples e rápida oferece uma experiência de sabor inigualável para os amantes de doces. Prepare este brownie e saboreie um doce delicioso e prático, perfeito para adoçar os momentos especiais ou satisfazer aquela vontade de um docinho rápido e saboroso.",
             "Ingredientes": [
                 "6 colheres (sopa) bem cheias de margarina sem sal",
                 "3/4 xícara (chá) achocolatado",
@@ -33,7 +33,7 @@
             "nome": "Suco de Couve",
             "tempo": "15 min",
             "porcoes": "8 porçoes",
-            "desrição": "Descubra a receita de Suco de couve para fazer em 15 minutos. Fica uma delícia, melhor do que caldo de cana.",
+            "descricao": "Descubra a receita de Suco de couve para fazer em 15 minutos. Fica uma delícia, melhor do que caldo de cana.",
             "Ingredientes": [
                 "8 Folhas de couve manteiga",
                 "4 Limões sem casca",
@@ -52,7 +52,7 @@
             "nome": "Coxinha",
             "tempo": "1 hr",
             "porcoes": "45 porções",
-            "desrição": "Pare de desejar a coxinha de frango da lanchonete da esquina e faça a sua própria! Com essa receita de massa de coxinha simples, você vai ficar de buchinho cheio e coração quentinho.",
+            "descricao": "Pare de desejar a coxinha de frango da lanchonete da esquina e faça a sua própria! Com essa receita de massa de coxinha simples, você vai ficar de buchinho cheio e coração quentinho.",
             "Ingredientes": [
                 "2 copos de água",
                 "1 copo de leite",
@@ -74,7 +74,7 @@
             "nome": "Suco de Amora",
             "tempo": "10 min",
             "porcoes": "4 porções",
-            "desrição": "Um suco de amora bem gelado pode deixar seu dia muito mais gostoso. Seja simplesmente para quando bate aquela sede ou para acompanhar suas refeições.",
+            "descricao": "Um suco de amora bem gelado pode deixar seu dia muito mais gostoso. Seja simplesmente para quando bate aquela sede ou para acompanhar suas refeições.",
             "Ingredientes": [
                 "100g de amoras congeladas",
                 "250ml de água",
@@ -93,7 +93,7 @@
             "nome": "Vitamina de Mamão",
             "tempo": "10 min",
             "porcoes": "2 porções",
-            "desrição": "Quando precisamos reforçar o cardápio com mais nutrientes ou comer um pouco mais mesmo estando sem fome, as melhores opções são as vitaminas naturais, principalmente a de mamão que é uma opção rica em vitamina C, que pode até ajudar a curar um resfriado ou algo parecido",
+            "descricao": "Quando precisamos reforçar o cardápio com mais nutrientes ou comer um pouco mais mesmo estando sem fome, as melhores opções são as vitaminas naturais, principalmente a de mamão que é uma opção rica em vitamina C, que pode até ajudar a curar um resfriado ou algo parecido",
             "Ingredientes": [
                 "1 banana",
                 "1 mamão",
@@ -105,14 +105,14 @@
                 "Coloque todos os ingredientes no liquidificador e bata até misturar e triturar bem.",
                 "Agora é só servir! Bom apetite."
             ],
-            "categoria": ""
+            "categoria": "Bebida"
         },
         {
             "imagem": "../img/coxinha2.jpg",
             "nome": "Coxinha de Mandioca",
             "tempo": "45 min",
             "porcoes": "15 porções",
-            "desrição": "Quer fazer a melhor coxinha do mundo? Então veja como fazer massa de coxinha de mandioca que fica crocante por fora e macia por dentro e é muito rápida de ser preparada.",
+            "descricao": "Quer fazer a melhor coxinha do mundo? Então veja como fazer massa de coxinha de mandioca que fica crocante por fora e macia por dentro e é muito rápida de ser preparada.",
             "Ingredientes": [
                 "500 gramas de mandioca cozida e amassada",
                 "400 gramas de frango cozido e desfiado",
@@ -126,9 +126,9 @@
                 "Disponha elas em uma assadeira e leve para o congelador até congelar.",
                 "Coloque as coxinhas congeladas na cestinha da airfryer e regue elas com azeite.",
                 "Pré-aqueça a fritadeira a 200 ºC e depois asse as coxinhas por 20 minutos.",
-                ""
+                "Agora é só servir. Bom apetite."
             ],
-            "categoria": "Agora é só servir. Bom apetite."
+            "categoria": "Salgado"
         }
     ]
 }

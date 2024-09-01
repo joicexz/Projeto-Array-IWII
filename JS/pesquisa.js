@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const termoPesquisa = inputPesquisa.value.toLowerCase();
                 resultadosDiv.innerHTML = ''; // Limpar resultados anteriores
 
-                const receitasFiltradas = receitas.filter(receita => 
+                const receitasFiltradas = receitas.filter(receita =>
                     receita.nome.toLowerCase().includes(termoPesquisa)
                 );
 

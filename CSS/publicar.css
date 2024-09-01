@@ -108,7 +108,7 @@ body {
     /* background-color: purple; */
     display: grid;
     grid-template-areas: "form" "btn";
-    grid-template-rows: auto 130px;
+    grid-template-rows: 1fr 130px;
 }
 
 .form {
@@ -123,72 +123,247 @@ body {
     border: 2px #15527d52 solid;
     display: grid;
     grid-template-areas: "file1" "file2" "file3" "file4" "file5";
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-rows: 500px auto auto auto auto;
 }
 
 .file1 {
     grid-area: file1;
     height: 100%;
     width: 100%;
-    background-color: red;
+    /* background-color: red; */
+    display: grid;
+    grid-template-areas: "esquerdo direito";
+    grid-template-rows: 1fr 1fr;
+}
+
+.esquerdo {
+    grid-area: esquerdo;
+    height: 100%;
+    width: 100%;
+    /* background-color: #15517D; */
+    font-family: "Kite One", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 45px;
+    gap: 35px;
+    font-size: 20px;
+}
+
+.esquerdo img {
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.img-area {
+    width: 300px;
+    height: 220px;
+    border-radius: 10px;
+    background-color: #a3acb59a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#uploadImagem {
+    margin-top: 10px;
+    padding: 10px;
+    border: 2px dashed #15517D;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #F5EDED;
+    font-family: "Kite One", sans-serif;
+    color: #15517D;
+    display: flex;
+}
+
+#uploadImagem:hover {
+    background-color: #e0e4e7;
+}
+
+.direito {
+    grid-area: direito;
+    height: 100%;
+    width: 100%;
+    /* background-color: pink; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Kite One", sans-serif;
+    flex-direction: column;
+    padding: 45px;
+    font-size: 20px;
+    gap: 25%;
+    /* justify-content: space-betwee; */
+}
+
+.direito div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 10px;
+
+}
+
+.direito input,
+textarea {
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding: 15px;
+    font-family: "Inter", sans-serif;
+    background-color: #a3acb59a;
+    width: 400px;
+
+}
+
+.direito input {
+    height: 40px;
+}
+
+.direito textarea {
+    height: 145px;
 }
 
 .file2 {
     grid-area: file2;
     height: 100%;
     width: 100%;
-    background-color: blue;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Kite One", sans-serif;
+    gap: 35px;
+    font-size: 20px;
+}
+
+#ingredienteInput {
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+#adicionarIngredienteBtn {
+    padding: 8px 15px;
+    background-color: #15517D;
+    color: #F5EDED;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#adicionarIngredienteBtn:hover {
+    background-color: #4777a7;
+}
+
+#listaIngredientes {
+    height: auto;
+    width: auto;
+    /* background-color: #15517D; */
+}
+
+#listaIngredientes li {
+    padding: 8px;
+    margin-bottom: 5px;
+    background-color: #F5EDED;
+    border-radius: 5px;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
 }
 
 .file3 {
     grid-area: file3;
     height: 100%;
     width: 100%;
-    background-color: green;
+    /* background-color: green; */
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    font-family: "Kite One", sans-serif;
+    gap: 35px;
+    font-size: 20px;
+}
+
+.file3 textarea {
+    width: 100%;
+    height: 250px;
 }
 
 .file4 {
     grid-area: file4;
     height: 100%;
     width: 100%;
-    background-color: yellow;
+    /* background-color: yellow; */
+    display: grid;
+    grid-template-areas: "tempo porcao";
+    grid-template-columns: 1fr 1fr;
+    display: flex;
+    align-items: center;
+    font-family: "Kite One", sans-serif;
+    padding: 45px;
+    gap: 35px;
+    font-size: 20px;
+}
+
+.file4 input {
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding: 15px;
+    font-family: "Inter", sans-serif;
+    background-color: #a3acb59a;
+    width: 400px;
+    height: 40px;
+}
+
+.tempo {
+    grid-area: tempo;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+}
+
+.porcao {
+    grid-area: porcao;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
 }
 
 .file5 {
     grid-area: file5;
     height: 100%;
     width: 100%;
-    background-color: indianred;
+    display: flex;
+    font-family: "Kite One", sans-serif;
+    padding: 45px;
+    gap: 35px;
+    font-size: 20px;
+    flex-direction: column;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.container-categoria {
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+}
 
 .btn {
     grid-area: btn;
@@ -218,33 +393,6 @@ body {
     background-color: #4777a7;
     color: #ffffff;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* FOOTER */
 .footer {
