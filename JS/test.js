@@ -29,22 +29,22 @@ document.getElementById('form-receita').addEventListener('submit', function (e) 
     };
 
     console.log(novaReceita);
-  
+
     // Envia os dados para o servidor
-    // fetch('receitas.json', { 
+    // fetch('../JS/receitas.json', {
     //     method: 'POST',
     //     headers: {
     //         'Content-Type': 'application/json'
     //     },
     //     body: JSON.stringify(novaReceita)
     // })
-    // .then(response => response.json())
-    // .then(data => {
-    //     console.log('Receita adicionada com sucesso:', data);
-    //     alert('Receita adicionada com sucesso!');
-    // })
-    // .catch((error) => {
-    //     console.error('Erro ao adicionar a receita:', error);
-    // });
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         console.log('Receita adicionada com sucesso:', data);
+    //         alert('Receita adicionada com sucesso!');
+    //     })
+    //     .catch((error) => {
+    //         console.error('Erro ao adicionar a receita:', error);
+    //     });
 });
 

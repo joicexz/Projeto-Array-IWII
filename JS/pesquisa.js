@@ -1,6 +1,6 @@
 // Carregar receitas do arquivo JSON quando a página é carregada
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('../receitas.json')
+    fetch('../JS/receitas.json')
         .then(response => response.json())
         .then(data => {
             const receitas = data.receitas;
@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
             // Filtrar receitas com base na pesquisa
             inputPesquisa.addEventListener('input', function () {
                 const termoPesquisa = inputPesquisa.value.toLowerCase();
+                console.log(termoPesquisa);
+
                 resultadosDiv.innerHTML = ''; // Limpar resultados anteriores
 
                 const receitasFiltradas = receitas.filter(receita =>

@@ -283,12 +283,12 @@ body {
 
 .heart {
     cursor: pointer;
-    color: #aca6a6; /* Cor padrão do coração */
+    color: #aca6a6; 
     transition: color 0.3s;
 }
 
 .heart.favorited {
-    color: #910b0b; /* Cor do coração quando favoritado */
+    color: #910b0b; 
 }
 
 

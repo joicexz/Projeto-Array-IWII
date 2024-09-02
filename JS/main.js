@@ -42,10 +42,10 @@ function updateHeartIcons() {
 
         if (favoritos.includes(id)) {
             heart.classList.add('favorited');
-            heart.style.color = '#910b0b'; // Ou qualquer outra cor que represente o estado favorito
+            // heart.style.color = '#910b0b'; // Ou qualquer outra cor que represente o estado favorito
         } else {
             heart.classList.remove('favorited');
-            heart.style.color = ''; // Ou a cor padrão
+            // heart.style.color = ''; // Ou a cor padrão
         }
     });
 }

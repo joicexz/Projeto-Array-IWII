@@ -1,17 +1,26 @@
 console.log('Favoritos armazenados:', JSON.parse(localStorage.getItem('favoritos')));
 
+
 document.addEventListener('DOMContentLoaded', async function () {
     // Carregar o JSON com as receitas
-    const response = await fetch('../JS/receitas.json'); // Substitua pelo caminho correto do seu JSON
+    const msg = document.getElementById('msg');
+    const response = await fetch('../JS/receitas.json');
     const data = await response.json();
 
     // Obter a lista de IDs de favoritos do localStorage
-    let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+    let favoritos = JSON.parse(localStorage.getItem('favoritos'));
+
     favoritos = favoritos.filter(id => id !== null && id.trim() !== '');
+    console.log(favoritos);
+
+    if (Object.keys(favoritos).length === 0) {
+        msg.innerHTML = 'Nenhuma receita favoritada.';
+
+    }
 
     // Obter o container onde os cards serão adicionados
     const container = document.querySelector('.receitas');
-    
+
     // Função para criar um card a partir dos dados da receita
     function createCard(receita) {
         const card = document.createElement('div');
@@ -32,9 +41,9 @@ document.addEventListener('DOMContentLoaded', async function () {
                     <i class='bx bxs-dish'></i>
                     <span>${receita.porcoes}</span>
                 </div>
-                <div class="like">
-                    <i class='bx bxs-heart heart'></i>
-                </div>
+                <div class="like"><i class='bx bxs-heart heart' 
+                onclick="toggleFavorite(this)"></i>
+        </div>
             </div>
         `;
 
@@ -42,7 +51,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         const heartIcon = card.querySelector('.heart');
         if (favoritos.includes(receita.id)) {
             heartIcon.classList.add('favorited');
-            heartIcon.style.color = '#ec0808'; // Cor do coração favoritado
+            // heartIcon.style.color = '#910b0b'; // Cor do coração favoritado
         }
 
         // Adiciona o card ao container
@@ -51,8 +60,6 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     // Filtra as receitas que são favoritas
     const receitasFavoritas = data.receitas.filter(receita => favoritos.includes(receita.id));
-
-    
 
     // Itera sobre as receitas favoritas e cria os cards
     receitasFavoritas.forEach(receita => {
