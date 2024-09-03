@@ -31,19 +31,25 @@ document.addEventListener('DOMContentLoaded', async function () {
             <div class="foto">
                 <img src="${receita.imagem}" alt="${receita.nome}">
             </div>
+
             <div class="receita">${receita.nome}</div>
+
             <div class="outro">
+
                 <div class="time">
                     <i class='bx bxs-time'></i>
                     <span>${receita.tempo}</span>
                 </div>
+
                 <div class="porcoes">
                     <i class='bx bxs-dish'></i>
                     <span>${receita.porcoes}</span>
                 </div>
-                <div class="like"><i class='bx bxs-heart heart' 
+
+                <div class="like">
+                <i class='bx bxs-heart heart' 
                 onclick="toggleFavorite(this)"></i>
-        </div>
+                </div>
             </div>
         `;
 

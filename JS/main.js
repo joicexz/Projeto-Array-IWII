@@ -1,4 +1,9 @@
-// localStorage.clear();
+function search(categoria) {
+    // Redireciona para a página de filtro com o parâmetro de categoria na URL
+    window.location.href = `../HTML/pesquisa.html?categoria=${encodeURIComponent(categoria)}`;
+
+}
+
 
 function toggleFavorite(element) {
 
@@ -11,7 +16,7 @@ function toggleFavorite(element) {
     let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
 
     console.log(favoritos);
-    
+
 
     if (element.classList.contains('favorited')) {
         // Adiciona o ID à lista de favoritos se não estiver presente

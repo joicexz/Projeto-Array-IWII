@@ -112,7 +112,7 @@ body {
     gap: 20px;
 }
 
-#receitas-encontradas{
+#receitas-encontradas {
     width: 100%;
     height: auto;
     display: flex;
@@ -195,6 +195,18 @@ body {
     align-items: center;
     font-size: 40px;
     cursor: pointer;
+}
+
+.heart {
+    cursor: pointer;
+    color: #aca6a6;
+    /* Cor padrão do coração */
+    transition: color 0.3s;
+}
+
+.heart.favorited {
+    color: #910b0b;
+    /* Cor do coração quando favoritado */
 }
 
 .pesquisa-result p {
