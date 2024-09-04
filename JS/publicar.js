@@ -56,5 +56,3 @@ adicionarIngredienteBtn.addEventListener('click', function () {
         ingredienteInput.value = '';
     }
 });
-
-
