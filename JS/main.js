@@ -1,8 +1,20 @@
+// FUNÇÃO PESQUISAR POR FILTRO
+
 function search(categoria) {
     // Redireciona para a página de filtro com o parâmetro de categoria na URL
     window.location.href = `../HTML/pesquisa.html?categoria=${encodeURIComponent(categoria)}`;
 
 }
+
+// FUNÇÃO MOSTRAR DETALHE RECEITA
+function mostrarDetalhe(card) {
+    // Obtém o ID da receita a partir do atributo data-id do card
+    const idReceita = card.getAttribute('data-id');
+
+    // Redireciona para a página detalhe.html com o ID como parâmetro
+    window.location.href = `../HTML/detalhe.html?id=${idReceita}`;
+}
+
 
 
 function toggleFavorite(element) {
