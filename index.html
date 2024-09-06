@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="img/icone.png">
-    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="../CSS/style.css">
     <title>Início</title>
 </head>
 
@@ -65,8 +65,8 @@
         </div>
 
         <div class="file1">
-            <div class="card" data-id="1" onclick="mostrarDetalhe(this)">
-                <div class="foto"><img src="./img/brownie.jpg" alt="brownie"></div>
+            <div class="card" data-id="1">
+                <div class="foto" onclick="mostrarDetalhe(this)"><img src="./img/brownie.jpg" alt="brownie"></div>
                 <div class="receita">Brownie simples</div>
                 <div class="outro">
                     <div class="time">
@@ -79,13 +79,14 @@
                         <span>8 porções</span>
                     </div>
 
-                    <div class="like"><i class='bx bxs-heart heart' onclick="toggleFavorite(this)"></i>
+                    <div class="like">
+                        <i class='bx bxs-heart heart' onclick="toggleFavorite(this)"></i>
                     </div>
                 </div>
             </div>
 
-            <div class="card" data-id="2" onclick="mostrarDetalhe(this)">
-                <div class="foto"><img src="./img/suco1.jpeg" alt="Suco de Couve"></div>
+            <div class="card" data-id="2">
+                <div class="foto" onclick="mostrarDetalhe(this)"><img src="./img/suco1.jpeg" alt="Suco de Couve"></div>
                 <div class="receita">Suco de Couve</div>
                 <div class="outro">
                     <div class="time">
@@ -98,13 +99,14 @@
                         <span>8 porções</span>
                     </div>
 
-                    <div class="like"><i class='bx bxs-heart heart' onclick="toggleFavorite(this)"></i>
+                    <div class="like">
+                        <i class='bx bxs-heart heart' onclick="toggleFavorite(this)"></i>
                     </div>
                 </div>
             </div>
 
-            <div class="card" data-id="3" onclick="mostrarDetalhe(this)">
-                <div class="foto"><img src="./img/coxinha1.jpg" alt="Coxinha"></div>
+            <div class="card" data-id="3">
+                <div class="foto" onclick="mostrarDetalhe(this)"><img src="./img/coxinha1.jpg" alt="Coxinha"></div>
                 <div class="receita">Coxinha</div>
                 <div class="outro">
                     <div class="time">
@@ -117,15 +119,16 @@
                         <span>45 porções</span>
                     </div>
 
-                    <div class="like"><i class='bx bxs-heart heart' onclick="toggleFavorite(this)"></i>
+                    <div class="like">
+                        <i class='bx bxs-heart heart' onclick="toggleFavorite(this)"></i>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="file2">
-            <div class="card" data-id="4" onclick="mostrarDetalhe(this)">
-                <div class="foto"><img src="./img/suco2.jpg" alt="Suco de Amora"></div>
+            <div class="card" data-id="4">
+                <div class="foto" onclick="mostrarDetalhe(this)"><img src="./img/suco2.jpg" alt="Suco de Amora"></div>
                 <div class="receita">Suco de Amora</div>
                 <div class="outro">
                     <div class="time">
@@ -138,13 +141,15 @@
                         <span>4 porções</span>
                     </div>
 
-                    <div class="like"><i class='bx bxs-heart heart' onclick="toggleFavorite(this)"></i>
+                    <div class="like">
+                        <i class='bx bxs-heart heart' onclick="toggleFavorite(this)"></i>
                     </div>
                 </div>
             </div>
 
-            <div class="card" data-id="5" onclick="mostrarDetalhe(this)">
-                <div class="foto"><img src="./img/vitamina.jpeg" alt="Vitamina de Mamão"></div>
+            <div class="card" data-id="5">
+                <div class="foto" onclick="mostrarDetalhe(this)"><img src="./img/vitamina.jpeg" alt="Vitamina de Mamão">
+                </div>
                 <div class="receita">Vitamina de Mamão</div>
                 <div class="outro">
                     <div class="time">
@@ -157,13 +162,15 @@
                         <span>2 porções</span>
                     </div>
 
-                    <div class="like"><i class='bx bxs-heart heart' onclick="toggleFavorite(this)"></i>
+                    <div class="like">
+                        <i class='bx bxs-heart heart' onclick="toggleFavorite(this)"></i>
                     </div>
                 </div>
             </div>
 
-            <div class="card" data-id="6" onclick="mostrarDetalhe(this)">
-                <div class="foto"><img src="./img/coxinha2.jpg" alt="Coxinha de Mandioca"></div>
+            <div class="card" data-id="6">
+                <div class="foto" onclick="mostrarDetalhe(this)"><img src="./img/coxinha2.jpg"
+                        alt="Coxinha de Mandioca"></div>
                 <div class="receita">Coxinha de Mandioca</div>
                 <div class="outro">
                     <div class="time">
@@ -196,7 +203,6 @@
                 <a href="./HTML/publicar.html">Publicar</a>
                 <a href="./HTML/favorito.html">Favoritos</a>
             </div>
-
         </div>
 
         <div class="midias">
@@ -206,8 +212,7 @@
         </div>
     </footer>
 
-    <script src="./JS/main.js"></script>
+    <script src="../JS/main.js"></script>
 </body>
-
 
 </html>

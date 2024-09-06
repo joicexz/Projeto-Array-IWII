@@ -20,7 +20,6 @@ body {
     overflow-x: hidden;
 }
 
-
 /* MENU */
 .nav {
     grid-area: nav;
@@ -68,11 +67,9 @@ body {
     align-items: center;
     border-radius: 50%;
     cursor: pointer;
-
 }
 
 /* INICIO */
-
 .inicio {
     grid-area: inicio;
     width: 100%;
@@ -123,7 +120,6 @@ body {
 }
 
 /* FILTRO */
-
 .filtro {
     grid-area: filtro;
     width: 100%;
@@ -156,7 +152,6 @@ body {
 }
 
 /* RECEITAS FEED */
-
 .receitas {
     grid-area: receitas;
     width: 100%;
@@ -191,7 +186,6 @@ body {
     justify-content: center;
     align-items: center;
     gap: 10%;
-
 }
 
 .file2 {
@@ -291,9 +285,7 @@ body {
     color: #910b0b; 
 }
 
-
 /* FOOTER */
-
 .footer {
     grid-area: footer;
     position: relative;
@@ -331,7 +323,6 @@ body {
     grid-area: logo-footer;
     width: 100%;
     height: 100%;
-    /* background-color: #15517D; */
 }
 
 .logo-footer img {

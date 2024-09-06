@@ -14,9 +14,31 @@ function carregarDetalhesReceita(id) {
                 document.getElementById('imagem-receita').src = receita.imagem;                
                 document.getElementById('imagem-receita').alt = receita.nome;
                 document.getElementById('descricao-receita').textContent = receita.descricao;
-                // Exiba outros detalhes como ingredientes, modo de preparo, etc.
+                document.getElementById('tempo').textContent = receita.tempo;
+                document.getElementById('porcao').textContent = receita.porcoes;
+
+                // Exibir os ingredientes
+                const ingredientesContainer = document.querySelector('.container-ingredientes ul');
+                ingredientesContainer.innerHTML = ''; // Limpa os ingredientes anteriores
+                console.log(ingredientesContainer);
+                
+                receita.Ingredientes.forEach(ingrediente => {
+                    const li = document.createElement('li');
+                    li.textContent = ingrediente;
+                    ingredientesContainer.appendChild(li);
+                });
+
+                // Exibir o modo de preparo
+                const preparoContainer = document.querySelector('.preparo ol');
+                preparoContainer.innerHTML = ''; // Limpa o modo de preparo anterior
+                receita.modoDePreparo.forEach(passo => {
+                    const li = document.createElement('li');
+                    li.textContent = passo;
+                    preparoContainer.appendChild(li);
+                });
+
             } else {
-                document.getElementById('detalhes-receita').innerHTML = '<p>Receita não encontrada.</p>';
+                document.querySelector('.container').innerHTML = '<p>Receita não encontrada.</p>';
             }
         })
         .catch(error => console.error('Erro ao carregar detalhes da receita:', error));

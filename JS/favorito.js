@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         card.setAttribute('data-id', receita.id);
 
         card.innerHTML = `
-            <div class="foto">
+            <div class="foto" onclick="mostrarDetalhe(this)">
                 <img src="${receita.imagem}" alt="${receita.nome}">
             </div>
 
