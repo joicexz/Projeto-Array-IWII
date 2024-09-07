@@ -1,50 +1,62 @@
-document.getElementById('form-receita').addEventListener('submit', function (e) {
-    e.preventDefault();
+const express = require('express');
+const fs = require('fs');
+const path = require('path');
+const bodyParser = require('body-parser');
+const cors = require('cors');  // Importa o middleware cors
 
-    console.log('click');
+const app = express();
+const port = 3000;
 
+// Configura o middleware CORS
+app.use(cors({
+    origin: 'http://localhost:8080'  // Permite solicitações apenas desta origem
+}));
 
-    // Captura os valores do formulário
-    const nome = document.getElementById('nome').value;
-    const descricao = document.getElementById('descricao').value;
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public')));
 
-    // // Captura os ingredientes da lista
-    // const ingredientes = Array.from(document.querySelectorAll('#listaIngredientes li'))
-    //                          .map(li => li.textContent);
+const jsonFilePath = path.join(__dirname, 'receitas.json');
 
-    const preparo = document.getElementById('preparo').value;
-    const tempo = document.getElementById('tempo').value;
-    const porcao = document.getElementById('porcao').value;
-    const categoria = document.querySelector('input[name="categoria"]:checked')?.value;
+// Rota para receber novos dados de receita
+app.post('/add-receita', (req, res) => {
+    const novaReceita = req.body;
 
-    // Cria um objeto com os dados da receita
-    const novaReceita = {
-        nome: nome,
-        descricao: descricao,
-        // Ingredientes: ingredientes,
-        modoDePreparo: preparo,
-        tempo: tempo,
-        porcoes: porcao,
-        categoria: categoria
-    };
+    // Ler o arquivo JSON existente
+    fs.readFile(jsonFilePath, 'utf8', (err, data) => {
+        if (err) {
+            return res.status(500).send('Erro ao ler o arquivo JSON.');
+        }
 
-    console.log(novaReceita);
+        const receitas = JSON.parse(data);
 
-    // Envia os dados para o servidor
-    // fetch('../JS/receitas.json', {
-    //     method: 'POST',
-    //     headers: {
-    //         'Content-Type': 'application/json'
-    //     },
-    //     body: JSON.stringify(novaReceita)
-    // })
-    //     .then(response => response.json())
-    //     .then(data => {
-    //         console.log('Receita adicionada com sucesso:', data);
-    //         alert('Receita adicionada com sucesso!');
-    //     })
-    //     .catch((error) => {
-    //         console.error('Erro ao adicionar a receita:', error);
-    //     });
+        // Adicionar nova receita
+        receitas.receitas.push(novaReceita);
+
+        console.log(novaReceita);
+
+        // Escrever as novas receitas de volta no arquivo
+        fs.writeFile(jsonFilePath, JSON.stringify(receitas, null, 2), (err) => {
+            if (err) {
+                return res.status(500).send('Erro ao salvar a nova receita.');
+            }
+            res.status(200).send('Receita adicionada com sucesso!');
+        });
+    });
 });
 
+// Rota para obter os dados de receitas (GET)
+app.get('/receitas', (req, res) => {
+    fs.readFile(jsonFilePath, 'utf8', (err, data) => {
+        if (err) {
+            return res.status(500).send('Erro ao ler o arquivo JSON.');
+        }
+
+        res.status(200).json(JSON.parse(data));
+    });
+});
+
+
+app.listen(port, () => {
+    console.log(`Servidor rodando em http://localhost:${port}`);
+});

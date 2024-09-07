@@ -56,3 +56,47 @@ adicionarIngredienteBtn.addEventListener('click', function () {
         ingredienteInput.value = '';
     }
 });
+
+
+document.getElementById('form-receita').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const nome = document.getElementById('nome').value;
+    const descricao = document.getElementById('descricao').value;
+    const preparo = document.getElementById('preparo').value;
+    const tempo = document.getElementById('tempo').value;
+    const porcao = document.getElementById('porcao').value;
+    const categoria = document.querySelector('input[name="categoria"]:checked')?.value;
+
+    const ingredientes = Array.from(document.querySelectorAll('#listaIngredientes li'))
+        .map(li => li.textContent);
+
+
+    const novaReceita = {
+        nome: nome,
+        // imagem: imagem,
+        descricao: descricao,
+        ingredientes: ingredientes,
+        modoDePreparo: preparo,
+        tempo: tempo,
+        porcoes: porcao,
+        categoria: categoria,
+    };
+
+    fetch('http://localhost:3000/add-receita', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(novaReceita)
+    })
+        .then(response => response.text())
+        .then(data => {
+            alert(data);
+        })
+        .catch((error) => {
+            console.error('Erro ao adicionar a receita:', error);
+        });
+});
+
+

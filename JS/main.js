@@ -60,3 +60,6 @@ function updateHeartIcons() {
 // atualiza o estado dos corações ao carregar a página
 document.addEventListener('DOMContentLoaded', updateHeartIcons);
 
+
+
+
