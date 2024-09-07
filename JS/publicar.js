@@ -7,8 +7,6 @@ document.getElementById('uploadImagem').addEventListener('change', function (eve
         reader.onload = function (e) {
             const imgElement = document.getElementById('imagemPreview');
             imgElement.src = e.target.result;  // Defina a fonte da imagem como a string base64
-            // console.log(imgElement.src);
-
             imgElement.style.display = 'block';  // Exibe a imagem
         };
 
@@ -16,7 +14,6 @@ document.getElementById('uploadImagem').addEventListener('change', function (eve
         reader.readAsDataURL(file);
     }
 });
-
 
 // Referências aos elementos
 const ingredienteInput = document.getElementById('ingredienteInput');
@@ -31,7 +28,6 @@ adicionarIngredienteBtn.addEventListener('click', function () {
         // Cria um novo item de lista (li)
         const li = document.createElement('li');
         li.textContent = ingrediente;
-        // console.log(ingrediente);
 
         // Botão para remover o ingrediente
         const removeBtn = document.createElement('button');
@@ -50,15 +46,29 @@ adicionarIngredienteBtn.addEventListener('click', function () {
 
         li.appendChild(removeBtn);  // Adiciona o botão de remover ao li
         listaIngredientes.appendChild(li);  // Adiciona o li à lista
-        // console.log(listaIngredientes);
 
         // Limpa o campo de input após adicionar o ingrediente
         ingredienteInput.value = '';
     }
 });
 
+// Função para obter o próximo ID
+async function getNextId() {
+    try {
+        const response = await fetch('../JS/receitas.json');
+        const data = await response.json();
 
-document.getElementById('form-receita').addEventListener('submit', function (e) {
+        // Encontrar o maior ID atual
+        const ultimoId = data.receitas.length;
+        console.log(ultimoId);
+
+        return ultimoId + 1  // Retorna o próximo ID
+    } catch (error) {
+        console.error('Erro ao carregar receitas:', error);
+    }
+}
+
+document.getElementById('form-receita').addEventListener('submit', async function (e) {
     e.preventDefault();
 
     const nome = document.getElementById('nome').value;
@@ -67,12 +77,13 @@ document.getElementById('form-receita').addEventListener('submit', function (e) 
     const tempo = document.getElementById('tempo').value;
     const porcao = document.getElementById('porcao').value;
     const categoria = document.querySelector('input[name="categoria"]:checked')?.value;
+    const ingredientes = Array.from(document.querySelectorAll('#listaIngredientes li')).map(li => li.textContent);
 
-    const ingredientes = Array.from(document.querySelectorAll('#listaIngredientes li'))
-        .map(li => li.textContent);
-
+    // Obter o próximo ID disponível
+    const novoId = await getNextId();
 
     const novaReceita = {
+        id: novoId,  // Define o novo ID incrementado
         nome: nome,
         // imagem: imagem,
         descricao: descricao,
@@ -81,6 +92,7 @@ document.getElementById('form-receita').addEventListener('submit', function (e) 
         tempo: tempo,
         porcoes: porcao,
         categoria: categoria,
+        favorito: "nao"  // Valor padrão
     };
 
     fetch('http://localhost:3000/add-receita', {
@@ -98,5 +110,3 @@ document.getElementById('form-receita').addEventListener('submit', function (e) 
             console.error('Erro ao adicionar a receita:', error);
         });
 });
-
-
