@@ -1,17 +1,40 @@
-document.getElementById('uploadImagem').addEventListener('change', function (event) {
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-analytics.js";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-storage.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyAI8sxnjZOaoZBLinp7Ab8dI1ZF9TqN2eU",
+    authDomain: "memorias-culinarias.firebaseapp.com",
+    projectId: "memorias-culinarias",
+    storageBucket: "memorias-culinarias.appspot.com",
+    messagingSenderId: "258479456651",
+    appId: "1:258479456651:web:4df53aa2e765505327af8e",
+    measurementId: "G-CFXJV7BFWM"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const storage = getStorage(app);
+
+// Função para lidar com o upload da imagem
+document.getElementById('uploadImagem').addEventListener('change', async function (event) {
     const file = event.target.files[0];
     if (file) {
-        const reader = new FileReader();
+        const storageRef = ref(storage, 'images/' + file.name);
+        try {
+            // Faz o upload da imagem
+            await uploadBytes(storageRef, file);
 
-        // Quando o carregamento da imagem for concluído
-        reader.onload = function (e) {
+            // Obtém a URL de download
+            const url = await getDownloadURL(storageRef);
             const imgElement = document.getElementById('imagemPreview');
-            imgElement.src = e.target.result;  // Defina a fonte da imagem como a string base64
-            imgElement.style.display = 'block';  // Exibe a imagem
-        };
 
-        // Leia o conteúdo do arquivo de imagem
-        reader.readAsDataURL(file);
+            imgElement.src = url;  // Define a URL da imagem como o src
+            imgElement.style.display = 'block';  // Exibe a imagem
+        } catch (error) {
+            console.error('Erro ao fazer upload da imagem:', error);
+        }
     }
 });
 
@@ -88,12 +111,15 @@ document.getElementById('form-receita').addEventListener('submit', async functio
     // Captura apenas o texto do <span> dentro de cada <li>
     const ingredientes = Array.from(document.querySelectorAll('#listaIngredientes li span')).map(span => span.textContent);
 
+    const imagemUrl = document.getElementById('imagemPreview').src;
+
     // Obter o próximo ID disponível
     const novoId = await getNextId();
 
     const novaReceita = {
         id: novoId,  // Define o novo ID incrementado
         nome: nome,
+        imagem: imagemUrl,
         descricao: descricao,
         ingredientes: ingredientes,
         modoDePreparo: preparo,

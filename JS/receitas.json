@@ -106,34 +106,6 @@
       ],
       "modoDePreparo": "Em um recipiente, coloque todos os ingredientes (menos a farinha de aveia) e misture bem. Pegue pequenas porções da massa, modele em formato de coxinha e empane na farinha de aveia. Disponha elas em uma assadeira e leve para o congelador até congelar. Coloque as coxinhas congeladas na cestinha da airfryer e regue elas com azeite. Pré-aqueça a fritadeira a 200 ºC e depois asse as coxinhas por 20 minutos. Agora é só servir. Bom apetite.",
       "categoria": "Salgado"
-    },
-    {
-      "id": "7",
-      "nome": "Churros de doce de leite",
-      "descricao": "churros",
-      "ingredientes": [
-        "doce",
-        "de",
-        "leite"
-      ],
-      "modoDePreparo": "docie",
-      "tempo": "1h30",
-      "porcoes": "teste",
-      "categoria": "Prato_Frio"
-    },
-    {
-      "id": "8",
-      "nome": "Joice Soares de Almeida",
-      "descricao": "linda e bonita",
-      "ingredientes": [
-        "precisa nascer dnv",
-        "vai tomando menó",
-        "suco de embelezamento"
-      ],
-      "modoDePreparo": "hehehehehe nem conto",
-      "tempo": "mil anos",
-      "porcoes": "unica né bb",
-      "categoria": "Prato_Quente"
     }
   ]
 }
