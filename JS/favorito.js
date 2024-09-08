@@ -13,10 +13,6 @@ document.addEventListener('DOMContentLoaded', async function () {
     favoritos = favoritos.filter(id => id !== null && id.trim() !== '');
     console.log(favoritos);
 
-    if (Object.keys(favoritos).length === 0) {
-        msg.innerHTML = 'Nenhuma receita favoritada.';
-
-    }
 
     // Obter o container onde os cards serão adicionados
     const container = document.querySelector('.receitas');
@@ -57,7 +53,6 @@ document.addEventListener('DOMContentLoaded', async function () {
         const heartIcon = card.querySelector('.heart');
         if (favoritos.includes(receita.id)) {
             heartIcon.classList.add('favorited');
-            // heartIcon.style.color = '#910b0b'; // Cor do coração favoritado
         }
 
         // Adiciona o card ao container
@@ -66,6 +61,11 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     // Filtra as receitas que são favoritas
     const receitasFavoritas = data.receitas.filter(receita => favoritos.includes(receita.id));
+
+
+    if (receitasFavoritas.length === 0) {
+        msg.innerHTML = 'Nenhuma receita favoritada.';
+    }
 
     // Itera sobre as receitas favoritas e cria os cards
     receitasFavoritas.forEach(receita => {

@@ -16,6 +16,7 @@ document.getElementById('uploadImagem').addEventListener('change', function (eve
 });
 
 // Referências aos elementos
+const container_ingredientes = document.querySelector('.ingredientes-container');
 const ingredienteInput = document.getElementById('ingredienteInput');
 const adicionarIngredienteBtn = document.getElementById('adicionarIngredienteBtn');
 const listaIngredientes = document.getElementById('listaIngredientes');
@@ -27,7 +28,11 @@ adicionarIngredienteBtn.addEventListener('click', function () {
     if (ingrediente !== '') {
         // Cria um novo item de lista (li)
         const li = document.createElement('li');
-        li.textContent = ingrediente;
+
+        // Adiciona o texto do ingrediente dentro de um <span>
+        const span = document.createElement('span');
+        span.textContent = ingrediente;
+        li.appendChild(span);  // Adiciona o <span> ao <li>
 
         // Botão para remover o ingrediente
         const removeBtn = document.createElement('button');
@@ -61,8 +66,10 @@ async function getNextId() {
         // Encontrar o maior ID atual
         const ultimoId = data.receitas.length;
         console.log(ultimoId);
+        const idString = ultimoId + 1;
+        console.log(idString.toString());
 
-        return ultimoId + 1  // Retorna o próximo ID
+        return idString.toString();  // Retorna o próximo ID
     } catch (error) {
         console.error('Erro ao carregar receitas:', error);
     }
@@ -77,7 +84,9 @@ document.getElementById('form-receita').addEventListener('submit', async functio
     const tempo = document.getElementById('tempo').value;
     const porcao = document.getElementById('porcao').value;
     const categoria = document.querySelector('input[name="categoria"]:checked')?.value;
-    const ingredientes = Array.from(document.querySelectorAll('#listaIngredientes li')).map(li => li.textContent);
+
+    // Captura apenas o texto do <span> dentro de cada <li>
+    const ingredientes = Array.from(document.querySelectorAll('#listaIngredientes li span')).map(span => span.textContent);
 
     // Obter o próximo ID disponível
     const novoId = await getNextId();
@@ -85,14 +94,12 @@ document.getElementById('form-receita').addEventListener('submit', async functio
     const novaReceita = {
         id: novoId,  // Define o novo ID incrementado
         nome: nome,
-        // imagem: imagem,
         descricao: descricao,
         ingredientes: ingredientes,
         modoDePreparo: preparo,
         tempo: tempo,
         porcoes: porcao,
-        categoria: categoria,
-        favorito: "nao"  // Valor padrão
+        categoria: categoria
     };
 
     fetch('http://localhost:3000/add-receita', {
@@ -110,3 +117,4 @@ document.getElementById('form-receita').addEventListener('submit', async functio
             console.error('Erro ao adicionar a receita:', error);
         });
 });
+

@@ -11,30 +11,21 @@ function carregarDetalhesReceita(id) {
 
             if (receita) {
                 document.getElementById('nome-receita').textContent = receita.nome.toUpperCase();
-                document.getElementById('imagem-receita').src = receita.imagem;                
+                document.getElementById('imagem-receita').src = receita.imagem;
                 document.getElementById('imagem-receita').alt = receita.nome;
                 document.getElementById('descricao-receita').textContent = receita.descricao;
                 document.getElementById('tempo').textContent = receita.tempo;
                 document.getElementById('porcao').textContent = receita.porcoes;
+                document.querySelector('.modoDePreparo').textContent = receita.modoDePreparo;
 
                 // Exibir os ingredientes
                 const ingredientesContainer = document.querySelector('.container-ingredientes ul');
                 ingredientesContainer.innerHTML = ''; // Limpa os ingredientes anteriores
-                console.log(ingredientesContainer);
-                
-                receita.Ingredientes.forEach(ingrediente => {
+
+                receita.ingredientes.forEach(ingrediente => {
                     const li = document.createElement('li');
                     li.textContent = ingrediente;
                     ingredientesContainer.appendChild(li);
-                });
-
-                // Exibir o modo de preparo
-                const preparoContainer = document.querySelector('.preparo ol');
-                preparoContainer.innerHTML = ''; // Limpa o modo de preparo anterior
-                receita.modoDePreparo.forEach(passo => {
-                    const li = document.createElement('li');
-                    li.textContent = passo;
-                    preparoContainer.appendChild(li);
                 });
 
             } else {
@@ -46,3 +37,4 @@ function carregarDetalhesReceita(id) {
 
 // Carregar os detalhes da receita ao carregar a página
 carregarDetalhesReceita(receitaId);
+
