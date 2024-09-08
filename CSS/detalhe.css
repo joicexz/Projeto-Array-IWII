@@ -242,13 +242,12 @@ body {
     margin-bottom: 30px;
 }
 
-.preparo ol{
+/* Estilo para o modo de preparo textarea */
+.modoDePreparo {
+    /* background-color: ; */
     display: flex;
     gap: 15px;
     flex-direction: column;
-}
-
-.preparo li{
     color: #302F2F;
     font-family: "Inter", sans-serif;
     font-size: 22px;
