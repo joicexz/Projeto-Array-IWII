@@ -21,7 +21,6 @@ body {
     overflow-x: hidden;
 }
 
-
 /* MENU */
 .nav {
     grid-area: nav;
@@ -71,9 +70,7 @@ body {
     cursor: pointer;
 }
 
-
 /* MAIN */
-
 .container {
     grid-area: container;
     width: 100%;
@@ -93,7 +90,6 @@ body {
 }
 
 .foto {
-    /* background-color: red; */
     grid-area: foto;
     width: 100%;
     height: 100%;
@@ -106,14 +102,12 @@ body {
     width: 350px;
     box-shadow: 9px 7px 18px 1px rgba(109, 109, 109, 0.59);
     border-radius: 5px;
-
 }
 
 .outro {
     grid-area: outro;
     width: 100%;
     height: 100%;
-    /* background-color: rgb(43, 226, 110); */
     display: grid;
     grid-template-areas: "receita-nome" "temp-porcao";
     grid-template-rows: 1fr 1fr;
@@ -123,7 +117,6 @@ body {
     grid-area: receita-nome;
     width: 100%;
     height: 100%;
-    /* background-color: rgb(61, 43, 226); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -140,7 +133,6 @@ body {
     grid-area: temp-porcao;
     width: 100%;
     height: 100%;
-    /* background-color: rgb(226, 165, 43); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -160,7 +152,6 @@ body {
     grid-area: descricao;
     width: 100%;
     height: 100%;
-    /* background-color: blueviolet; */
     border-top: 5px #F5F1F1 solid;
     display: flex;
     gap: 50px;
@@ -168,7 +159,6 @@ body {
     justify-content: center;
     align-items: center;
     padding: 25px;
-
 }
 
 .descricao h1 {
@@ -184,14 +174,12 @@ body {
     font-size: 22px;
     text-align: justify;
     margin-bottom: 40px;
-
 }
 
 .ingredientes {
     grid-area: ingredientes;
     width: 100%;
     height: 100%;
-    /* background-color: orange; */
     display: flex;
     gap: 50px;
     flex-direction: column;
@@ -242,9 +230,7 @@ body {
     margin-bottom: 30px;
 }
 
-/* Estilo para o modo de preparo textarea */
 .modoDePreparo {
-    /* background-color: ; */
     display: flex;
     gap: 15px;
     flex-direction: column;
@@ -270,7 +256,6 @@ body {
     font-size: 20px;
     color: #221e1e88;
     font-family: "Inter", sans-serif;
-
 }
 
 /* FOOTER */

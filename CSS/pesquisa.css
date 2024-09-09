@@ -67,8 +67,8 @@ body {
     outline: none;
     background-color: #F5EDED;
     border: 2px #ACA6A6 solid;
-    padding-left: 20px;
     font-size: 16px;
+    padding-left: 20px;
 }
 
 .pesquisa-card input::placeholder {

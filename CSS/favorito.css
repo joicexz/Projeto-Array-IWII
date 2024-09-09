@@ -21,7 +21,6 @@ body {
     overflow-x: hidden;
 }
 
-
 /* MENU */
 .nav {
     grid-area: nav;
@@ -69,12 +68,9 @@ body {
     align-items: center;
     border-radius: 50%;
     cursor: pointer;
-
 }
 
-
 /* MAIN */
-
 .container {
     grid-area: container;
     width: 100%;
@@ -96,7 +92,7 @@ body {
     margin: 20px;
 }
 
-#msg{
+#msg {
     font-size: 20px;
     color: #221e1e88;
     font-family: "Inter", sans-serif;
@@ -184,21 +180,12 @@ body {
 .heart {
     cursor: pointer;
     color: #aca6a6;
-    /* Cor padrão do coração */
     transition: color 0.3s;
 }
 
 .heart.favorited {
     color: #910b0b;
-    /* Cor do coração quando favoritado */
 }
-
-
-
-
-
-
-
 
 .link {
     grid-area: link;
@@ -211,30 +198,6 @@ body {
     color: #15517D;
     font-size: 20px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* FOOTER */
 .footer {
