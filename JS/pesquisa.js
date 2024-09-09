@@ -49,7 +49,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (receitasFiltradas.length === 0) {
                     resultadosDiv.innerHTML = '<p>Nenhuma receita encontrada.</p>';
                 }
-
                 // atualiza o estado dos ícones de coração
                 updateHeartIcons();
             });

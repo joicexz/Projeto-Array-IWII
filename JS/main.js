@@ -6,9 +6,11 @@ function search(categoria) {
 
 // FUNÇÃO MOSTRAR DETALHE RECEITA
 function mostrarDetalhe(element) {
+
     // encontra o elemento 'card'
     const card = element.closest('.card');
     const receitaId = card.getAttribute('data-id'); // obtém o ID da receita do atributo data-id
+    
     // redireciona para a página de detalhes da receita correspondente
     window.location.href = `../HTML/detalhe.html?id=${receitaId}`;
 }

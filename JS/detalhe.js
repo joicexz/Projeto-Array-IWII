@@ -1,8 +1,8 @@
-// Captura o ID da receita da URL
+// captura o ID da receita da URL
 const urlParams = new URLSearchParams(window.location.search);
 const receitaId = urlParams.get('id');
 
-// Função para carregar os detalhes da receita com base no ID
+// FUNÇÃO PARA CARREGAR OS DETALHES DA RECEITA COM BASE NO ID
 function carregarDetalhesReceita(id) {
     fetch('../JS/receitas.json')
         .then(response => response.json())
@@ -18,9 +18,9 @@ function carregarDetalhesReceita(id) {
                 document.getElementById('porcao').textContent = receita.porcoes;
                 document.querySelector('.modoDePreparo').textContent = receita.modoDePreparo;
 
-                // Exibir os ingredientes
+                // exibe os ingredientes
                 const ingredientesContainer = document.querySelector('.container-ingredientes ul');
-                ingredientesContainer.innerHTML = ''; // Limpa os ingredientes anteriores
+                ingredientesContainer.innerHTML = '';
 
                 receita.ingredientes.forEach(ingrediente => {
                     const li = document.createElement('li');
@@ -35,6 +35,6 @@ function carregarDetalhesReceita(id) {
         .catch(error => console.error('Erro ao carregar detalhes da receita:', error));
 }
 
-// Carregar os detalhes da receita ao carregar a página
+// carrega os detalhes da receita 
 carregarDetalhesReceita(receitaId);
 
